@@ -125,9 +125,10 @@ public class Peer implements CallEndedListener {
                 clone.mergeCalls(original);
                 clone.setState(b.getCloneState());
                 this.evaluateState();
-            } else
+            } else {
                 logger.warn("When processing masquradeEvent we could not find the expected calls. event=" //$NON-NLS-1$
-                        + b.toString() + " original=" + original + " clone=" + clone); //$NON-NLS-1$ //$NON-NLS-2$
+                    + b.toString() + " original=" + original + " clone=" + clone); //$NON-NLS-1$ //$NON-NLS-2$
+            }
         }
     }
 

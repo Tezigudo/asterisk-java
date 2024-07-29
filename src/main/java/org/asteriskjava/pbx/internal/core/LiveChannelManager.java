@@ -257,10 +257,10 @@ public class LiveChannelManager extends Lockable implements FilteredManagerListe
 
                 }
 
-            } else
+            } else {
                 logger.error("Either the clone or original channelProxy was missing during a masquerade: cloneIndex="
-                        + cloneIndex + " originalIndex=" + originalIndex);
-
+                    + cloneIndex + " originalIndex=" + originalIndex);
+            }
         }
         if (event instanceof RenameEvent) {
             RenameEvent rename = (RenameEvent) event;

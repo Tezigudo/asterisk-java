@@ -252,9 +252,9 @@ public enum AsteriskPBX implements PBX, ChannelHangupListener {
                 logger.error(e, e);
                 throw new PBXException(e);
             }
-        } else
+        } else {
             logger.debug("Suppressed hangup for " + channel + " as it was already hungup"); //$NON-NLS-1$ //$NON-NLS-2$
-
+        }
     }
 
     @Override
