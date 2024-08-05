@@ -50,8 +50,9 @@ public class MeetmeRoom extends Lockable {
                 this.channels.add(channel);
                 this.channelCount++;
                 newChannel = true;
-            } else
+            } else {
                 MeetmeRoom.logger.error("rejecting " + channel + " already in meetme."); //$NON-NLS-1$ //$NON-NLS-2$
+            }
             return newChannel;
         }
     }
