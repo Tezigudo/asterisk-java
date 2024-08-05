@@ -102,8 +102,9 @@ class CoherentManagerConnection implements FilteredManagerListener<ManagerEvent>
 
     public static synchronized void init()
             throws IllegalStateException, IOException, AuthenticationFailedException, TimeoutException, InterruptedException {
-        if (self != null)
+        if (self != null) {
             logger.warn("The CoherentManagerConnection has already been initialised");
+        }
         else {
             self = new CoherentManagerConnection();
             boolean done = false;

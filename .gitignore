@@ -15,3 +15,4 @@ build/
 /.packages
 /.dart_tool/
 logs/
+.DS_Store
